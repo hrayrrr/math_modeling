@@ -1,0 +1,10 @@
+gravity_constant = 6.67 * 10**(-11)
+light_speed = 3 * 10**8
+avogadro_constant = 6 * 10**23
+faraday_constant = 9.6 * 10**4
+elementary_charge = 1.6 * 10**(-19)
+universal_gas_constant = 8.3
+boltzmann_constant = 1.38 * 10**(-23)
+constant_plank = 6.6 * 10**(-34)
+euler_number = 2,718
+acceleration_of_gravity = 9.8
