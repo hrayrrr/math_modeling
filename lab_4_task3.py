@@ -3,7 +3,12 @@ from physical_constants import g
 
 def mult_func(a):
   x = (a[0] * g * a[1]) + ((a[0] * a[2] ** 2)/2)
+  return x
 
-a = np.array([45, 20, 25])
+m = 45
+h = 20
+v = 25
+
+a = np.array([m, h, v])
 
 print(mult_func(a))
