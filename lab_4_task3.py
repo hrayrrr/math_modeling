@@ -1,7 +1,7 @@
 import numpy as np
 from physical_constants import g
 
-def mult_func(a):
+def energy_func(a):
   x = (a[0] * g * a[1]) + ((a[0] * a[2] ** 2)/2)
   return x
 
@@ -11,4 +11,4 @@ v = 25
 
 a = np.array([m, h, v])
 
-print(mult_func(a))
+print(energy_func(a))
