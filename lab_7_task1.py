@@ -1,24 +1,25 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 
-def cycloid(r):
-  x = []
-  y = []
-  for i in np.linspace(-2*np.pi, 2*np.pi, 100):
-    x.append(r*(i - np.sin(i)))
-    y.append(r*(1 - np.cos(i)))
-  plt.plot(x,y)
-  plt.show()
+fig, ax = plt.subplots() 
+cicloid, = plt.plot([], [], 'o', color='r')
 
-cycloid(5)
+xdata, ydata = [], []
 
-def astroida():
-  x=[]
-  y=[]
-  for i in range (1,1000):
-    x.append((np.sin(i))**3)
-    y.append((np.cos(i))**3)
-  plt.plot(x,y)
-  plt.show()
+def update(R, t):
+  x = R * (t - (np.sin(t)))
+  y = R * (1-((np.cos(t))))
+  return x, y
 
-astroida()
+edge = 50
+plt.axis('equal')
+ax.set_xlim(-edge, edge)
+ax.set_ylim(-edge, edge)
+
+def animate(i):
+  cicloid.set_data(update(R=1, t=i))
+
+ani = FuncAnimation(fig, animate, frames=t, interval=10)
+
+ani.save('anima_task1.gif')
