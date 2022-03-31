@@ -4,6 +4,7 @@ from matplotlib.animation import FuncAnimation
 
 fig, ax = plt.subplots() 
 cicloid, = plt.plot([], [], 'o', color='r')
+cicloid_line, = plt.plot([], [], '-', color='r')
 
 xdata, ydata = [], []
 
@@ -18,8 +19,11 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
-  cicloid.set_data(update(R=1, t=i))
+  cicloid.set_data(update(R=10, t=i))
+  xdata.append(update(R=10, t=i)[0])
+  ydata.append(update(R=10, t=i)[1])
+  cicloid_line.set_data(xdata[:i],ydata[:i])
 
-ani = FuncAnimation(fig, animate, frames=t, interval=10)
+ani = FuncAnimation(fig, animate, frames=120, interval=50)
 
-ani.save('anima_task1.gif')
+ani.save('lab_7_task1.gif')

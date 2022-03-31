@@ -25,8 +25,7 @@ for i in range(len(t)):
 
 def update(i):
   bab.set_data(coordsx[:i], coordsy[:i])
-  
 
 ani = FuncAnimation(fig, update, frames=len(coordsx), interval=40)
 
-ani.save('anima_task3.gif')
+ani.save('lab_7_task3.gif')
