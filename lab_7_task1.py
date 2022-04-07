@@ -19,11 +19,11 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
-  cicloid.set_data(update(R=10, t=i))
-  xdata.append(update(R=10, t=i)[0])
-  ydata.append(update(R=10, t=i)[1])
+  cicloid.set_data(update(R=2, t=i))
+  xdata.append(update(R=2, t=i)[0])
+  ydata.append(update(R=2, t=i)[1])
   cicloid_line.set_data(xdata[:i],ydata[:i])
 
-ani = FuncAnimation(fig, animate, frames=120, interval=50)
+ani = FuncAnimation(fig, animate, frames=120, interval=40)
 
 ani.save('lab_7_task1.gif')
