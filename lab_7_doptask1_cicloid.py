@@ -38,4 +38,4 @@ ani = FuncAnimation(fig,
 plt.xlim(0,10)
 plt.ylim(0,3)
 
-ani.save('lab_7_doptask1.gif')
+ani.save('lab_7_doptask1_cicloid.gif')
