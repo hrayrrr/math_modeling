@@ -8,8 +8,8 @@ ax.axis('equal')
 
 t = np.linspace(0, 30*np.pi, 400)
 
-R = 44
-r = 18
+R = 37
+r = 15
 
 x = ((R - r) * np.cos(t)) + (r * np.cos(t * ((R - r)/r)))
 y = ((R - r) * np.sin(t)) - (r * np.sin(t * ((R - r)/r)))
